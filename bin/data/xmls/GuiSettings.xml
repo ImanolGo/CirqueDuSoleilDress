@@ -1,0 +1,21 @@
+<LedVase>
+	<FPS>24.0007</FPS>
+	<Color>
+		<Hue>147.945</Hue>
+		<Saturation>255</Saturation>
+		<Brightness>255</Brightness>
+	</Color>
+	<Image_Export>
+		<Record>0</Record>
+		<Mirror>1</Mirror>
+	</Image_Export>
+	<Perlin_Visuals>
+		<Perlin_Frequency>1.21283</Perlin_Frequency>
+		<Perlin_Speed>1.52236</Perlin_Speed>
+	</Perlin_Visuals>
+<LedVase/>
+<Modes>
+		<Perlin>1</Perlin>
+		<Animations>0</Animations>
+	</Modes>
+</LedVase>
