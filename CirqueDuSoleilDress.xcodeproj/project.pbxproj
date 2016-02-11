@@ -95,7 +95,7 @@
 		F7EA3801298F5E54967C119B /* ImageVisual3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6F074B2A9C65331157B2C /* ImageVisual3D.cpp */; };
 		FCE563361183176FBBFF75D2 /* AnimationsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43EB74194321F0F1D09DA04 /* AnimationsManager.cpp */; };
 		FDBF3E3276ACAF0114532C4B /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5226C8680238D2C7A07EEFB /* KeyboardManager.cpp */; };
-		FE6445129B6360AA4E6AD0B9 /* CylinderAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56850F848C49588F8919CA71 /* CylinderAnimation.cpp */; };
+		FE6445129B6360AA4E6AD0B9 /* CylinderAnimationUp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56850F848C49588F8919CA71 /* CylinderAnimationUp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,7 +162,7 @@
 		3BCE0794E19FC20EABD2173D /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = src/Addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
 		3C01FEEAD29823C01C4EEC27 /* CameraAnimationsManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CameraAnimationsManager.cpp; path = src/Engine/3D/CameraAnimationsManager.cpp; sourceTree = SOURCE_ROOT; };
 		3C02221CBAB8DFC5691E7923 /* PerlinManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PerlinManager.cpp; path = src/Visuals/PerlinManager.cpp; sourceTree = SOURCE_ROOT; };
-		3CFB54418E57DF43DBF6F201 /* CylinderAnimation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CylinderAnimation.h; path = src/Visuals/CylinderAnimation.h; sourceTree = SOURCE_ROOT; };
+		3CFB54418E57DF43DBF6F201 /* CylinderAnimationUp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CylinderAnimationUp.h; path = src/Visuals/CylinderAnimationUp.h; sourceTree = SOURCE_ROOT; };
 		3DD6F074B2A9C65331157B2C /* ImageVisual3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ImageVisual3D.cpp; path = src/Engine/Visuals/ImageVisual3D.cpp; sourceTree = SOURCE_ROOT; };
 		404BD01D94515880BDB3BB31 /* HorizontalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HorizontalTiltShifPass.cpp; path = src/Addons/ofxPostProcessing/src/HorizontalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
 		4229475864D5EBC7913C8351 /* LayoutManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LayoutManager.cpp; path = src/Layout/LayoutManager.cpp; sourceTree = SOURCE_ROOT; };
@@ -176,7 +176,7 @@
 		4FE37A31C904F445222B25FC /* ViewManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ViewManager.cpp; path = src/Engine/Visuals/ViewManager.cpp; sourceTree = SOURCE_ROOT; };
 		5056FC61E30B9810903B814D /* AppManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = AppManager.cpp; path = src/Main/AppManager.cpp; sourceTree = SOURCE_ROOT; };
 		5641DE8CEC2154DE44CF8E79 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxToggle.cpp; path = src/Addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
-		56850F848C49588F8919CA71 /* CylinderAnimation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CylinderAnimation.cpp; path = src/Visuals/CylinderAnimation.cpp; sourceTree = SOURCE_ROOT; };
+		56850F848C49588F8919CA71 /* CylinderAnimationUp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CylinderAnimationUp.cpp; path = src/Visuals/CylinderAnimationUp.cpp; sourceTree = SOURCE_ROOT; };
 		5830AA7CE7ED683E07AB0677 /* HorizontalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HorizontalTiltShifPass.h; path = src/Addons/ofxPostProcessing/src/HorizontalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
 		589D5A41B8E9E3B5FC11BCDB /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/include/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		59AD73639CD22E93AEDDE155 /* ofxPostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPostProcessing.h; path = src/Addons/ofxPostProcessing/src/ofxPostProcessing.h; sourceTree = SOURCE_ROOT; };
@@ -637,8 +637,8 @@
 			children = (
 				E43EB74194321F0F1D09DA04 /* AnimationsManager.cpp */,
 				CE881FA143A504D6D852F1B1 /* AnimationsManager.h */,
-				56850F848C49588F8919CA71 /* CylinderAnimation.cpp */,
-				3CFB54418E57DF43DBF6F201 /* CylinderAnimation.h */,
+				56850F848C49588F8919CA71 /* CylinderAnimationUp.cpp */,
+				3CFB54418E57DF43DBF6F201 /* CylinderAnimationUp.h */,
 				C5B2FDB91DADF7FAA8F0E58C /* ImageManager.cpp */,
 				8729A2323014D158DBFC5AD8 /* ImageManager.h */,
 				3C02221CBAB8DFC5691E7923 /* PerlinManager.cpp */,
@@ -736,8 +736,8 @@
 			isa = PBXGroup;
 			children = (
 				AD642137CCDF61FB3E6CCEA2 /* Addons */,
-				5BD69B807F2C3042D780C11A /* Dress */,
 				E2C62C2B4F591B9A20DAF22A /* Engine */,
+				5BD69B807F2C3042D780C11A /* Dress */,
 				375D8B140B52B55EB32EB487 /* Layout */,
 				AF4FDCF7E02C59FCC5FE54A2 /* Main */,
 				C02C33831C66F04FEBAE29DE /* Visuals */,
@@ -909,7 +909,7 @@
 				DA22DA3A4F2E611DF50078F2 /* main.cpp in Sources */,
 				58BCEB4034B30CB4A3456FC7 /* SettingsManager.cpp in Sources */,
 				FCE563361183176FBBFF75D2 /* AnimationsManager.cpp in Sources */,
-				FE6445129B6360AA4E6AD0B9 /* CylinderAnimation.cpp in Sources */,
+				FE6445129B6360AA4E6AD0B9 /* CylinderAnimationUp.cpp in Sources */,
 				8310E60C1E2408B2C5269D5B /* ImageManager.cpp in Sources */,
 				C3276AA0EAC9F6B788B32384 /* PerlinManager.cpp in Sources */,
 				41495ECD0155116522DCA99A /* VideoManager.cpp in Sources */,

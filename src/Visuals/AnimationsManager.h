@@ -11,7 +11,7 @@
 
 #include "Manager.h"
 
-#include "CylinderAnimation.h"
+#include "CylinderAnimationUp.h"
 
 
 
@@ -78,7 +78,7 @@ class AnimationsManager: public Manager
         ofRectangle     m_boundingBox;
         int             m_mode;
 
-        CylinderAnimation  m_cylinderAnimation;
+        CylinderAnimationUp  m_cylinderAnimation;
 
         ofFbo               m_fbo;
         ofShader            m_shader;

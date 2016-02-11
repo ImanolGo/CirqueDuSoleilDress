@@ -56,6 +56,8 @@ public:
     
     void onSetAnimationMode(bool& value);
     
+    void onSetVideoMode(bool& value);
+    
 private:
     
     void setupGuiParameters();
@@ -67,6 +69,8 @@ private:
     void setupImageGui();
     
     void setupModesGui();
+    
+    void setupVideoGui();
 
 
 private:
@@ -80,12 +84,17 @@ private:
     ofParameterGroup    m_parametersPerlin;
     ofParameterGroup    m_parametersLayout;
     ofParameterGroup    m_parametersImage;
+    ofParameterGroup    m_parametersVideo;
+    
+    ofxButton           m_nextVideo;
+    ofParameter<bool>   m_recordVideoLoops;
     
     ofParameter<float>    m_perlinFrequency;
     ofParameter<float>    m_perlinSpeed;
     
     ofParameter<bool>     m_perlinMode;
     ofParameter<bool>     m_animationMode;
+    ofParameter<bool>     m_videoMode;
     
     ofParameter<bool>     m_imageRecord;
     ofParameter<bool>     m_imageMirror;

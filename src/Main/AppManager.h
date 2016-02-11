@@ -24,6 +24,7 @@
 #include "PerlinManager.h"
 #include "AnimationsManager.h"
 #include "ImageManager.h"
+#include "VideoManager.h"
 
 
 //========================== class AppManager ==============================
@@ -90,6 +91,9 @@ public:
     //! Returns the animations manager
     AnimationsManager&   getAnimationsManager() { return m_animationsManager; }
     
+    //! Returns the video manager
+    VideoManager&   getVideoManager() { return m_videoManager; }
+    
     
     
     //==========================================================================
@@ -136,6 +140,7 @@ private:
     LayoutManager            m_layoutManager;            ///< Manages the Layout
     ImageManager             m_imageManager;             ///< Manages the images to be exported
     AnimationsManager        m_animationsManager;         ///< Manages the animations to visualize
+    VideoManager             m_videoManager;             ///< Manages the video  visuals
     
     bool                     m_debugMode;
 };

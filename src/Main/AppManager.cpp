@@ -65,14 +65,20 @@ void AppManager::setupManagers()
     m_visualEffectsManager.setup();
     m_settingsManager.setup();
     m_resourceManager.setup();
+    m_videoManager.setup();
     m_threeDManager.setup();
     m_layoutManager.setup();
+    m_guiManager.setup();
     m_perlinManager.setup();
     m_ledsManager.setup();
     m_dressManager.setup();
     m_imageManager.setup();
+    m_animationsManager.setup();
     
-    m_guiManager.setup();
+    m_videoManager.resetPosition();
+    m_animationsManager.resetPosition();
+    
+   
     
 }
 
@@ -85,6 +91,7 @@ void AppManager::update()
     m_ledsManager.update();
     m_imageManager.update();
     m_dressManager.update();
+    m_videoManager.update();
     m_threeDManager.update();
 }
 
@@ -99,6 +106,8 @@ void AppManager::draw()
     m_threeDManager.end();
     
     m_viewManager.draw();
+    
+    m_videoManager.draw();
     
     m_guiManager.draw();
     
