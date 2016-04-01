@@ -17,7 +17,7 @@
 
 ImageManager::ImageManager(): Manager(), m_isRecording(false), m_mirror(false)
 {
-	//Intentionally left empty
+    //Intentionally left empty
 }
 
 
@@ -29,12 +29,14 @@ ImageManager::~ImageManager()
 
 void ImageManager::setup()
 {
-	if(m_initialized)
-		return;
-
-
-	Manager::setup();
+    if(m_initialized)
+        return;
     
+    
+    Manager::setup();
+    
+    m_image.clear();
+    m_colors.clear();
     
     ofLogNotice() <<"ImageManager::initialized" ;
     
@@ -46,7 +48,7 @@ void ImageManager::setup()
 void ImageManager::update()
 {
     if (m_isRecording) {
-         this->updateColorPixels();
+        this->updateColorPixels();
     }
 }
 
@@ -73,8 +75,12 @@ void ImageManager::onRecordingChange(bool& value)
     if (m_isRecording && !value) {
         this->saveImage();
     }
+    else{
+        m_image.clear();
+        m_colors.clear();
+    }
     
-     m_isRecording = value;
+    m_isRecording = value;
 }
 
 
@@ -88,7 +94,7 @@ void ImageManager::saveImage()
         this->saveImageSample();
     }
     
-
+    
     m_image.clear();
     m_colors.clear();
 }
@@ -170,10 +176,10 @@ void ImageManager::saveImageSample()
     ofPixelsRef pixels = m_image.getPixelsRef();
     
     /*
-    In a bottom-up DIB, the image buffer starts with the bottom row of pixels, followed by the next row up,
-    and so forth. The top row of the image is the last row in the buffer.
-    Therefore, the first byte in memory is the bottom-left pixel of the image.
-    */
+     In a bottom-up DIB, the image buffer starts with the bottom row of pixels, followed by the next row up,
+     and so forth. The top row of the image is the last row in the buffer.
+     Therefore, the first byte in memory is the bottom-left pixel of the image.
+     */
     
     
     for (int y = 0; y < height; y++) {

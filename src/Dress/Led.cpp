@@ -59,12 +59,27 @@ void Led::setPixelColor(ofPixelsRef pixels)
     float minY = AppManager::getInstance().getLedsManager().getMin().z;
     float maxY = AppManager::getInstance().getLedsManager().getMax().z;
     
+    float minZ = AppManager::getInstance().getLedsManager().getMin().y;
+    float maxZ = AppManager::getInstance().getLedsManager().getMax().y;
+    
+    float treshold = minZ + (maxZ - minZ)*0.5;
+    
+    
+    ofVec2f pixelPos;
+    if(m_position.y >= treshold ){
+        pixelPos.x = ofMap(m_position.x, minX, maxX, 0, (pixels.getWidth()-1)*0.5);
+        pixelPos.y = ofMap(m_position.z, maxY, minY, 0,  pixels.getHeight()-1);
+    }
+    else{
+        pixelPos.x = ofMap(m_position.x, minX, maxX, pixels.getWidth()-1, (pixels.getWidth()-1)*0.5);
+        pixelPos.y = ofMap(m_position.z, maxY, minY, 0,  pixels.getHeight()-1);
+    }
+    
     //ofLogNotice() << minY; ofLogNotice() << maxY;
     
     //ofLogNotice() << pixels.getWidth(); ofLogNotice() << pixels.getHeight();
-    ofVec2f pixelPos;
-    pixelPos.x = ofMap(m_position.x, minX, maxX, 0, pixels.getWidth()-1);
-    pixelPos.y = ofMap(m_position.z, minY, maxY, 0, pixels.getHeight()-1);
+   
+    
     
     //ofLogNotice() <<  m_position.x ; ofLogNotice() <<  m_position.y;
     //ofLogNotice() <<  pixelPos.x ; ofLogNotice() <<  pixelPos.y;
